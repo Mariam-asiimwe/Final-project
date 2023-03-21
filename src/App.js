@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Button from "react-bootstrap/Button"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import './App.scss';
+import Recipe from './components/Recipe';
+
 
 function App() {
+  const [recipes,setRecipes]=useState([])
+  const [searchTerm,setSearchTerm]=useState()
+  let apiUrl ="https://api.edamam.com/api/recipes/v2?type=public&app_id=0639710c&app_key=e94e7c998f0107fb2b6478641c6d762d&q="
+  async function getRecipes(term){
+    let result=await fetch(apiUrl+term)
+    let data=await result.json()
+    // console.log (data.hits)
+    setRecipes(data.hits.slice(0,6))
+  }
+  function handleSubmit(){
+    getRecipes(searchTerm)
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input value={searchTerm}onChange={(event)=>setSearchTerm(event.target.value)}/>
+      <Button variant='primary' onClick={handleSubmit}>Search</Button> 
+
+      
+      {recipes && recipes.map((item, index)=>
+        <Recipe key={index} item={item} />
+      )}
     </div>
+    
   );
 }
+
+
 
 export default App;
