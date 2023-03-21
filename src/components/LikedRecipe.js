@@ -15,7 +15,7 @@ export default function MyCheckbox() {
           checked={liked}
           onChange={handleChange}
         />
-        I liked this
+        I enjoyed this!
       </label>
       <p>You {liked ? 'liked' : 'did not like'} this.</p>
     </>

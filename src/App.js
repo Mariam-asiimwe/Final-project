@@ -1,10 +1,11 @@
-import React from "react";
+// import React from "react";
 import Button from "react-bootstrap/Button"
 import './App.css';
 import { useState } from 'react';
-// import RecentRecipes from './components/RecentRecipes';
-// import LikedRecipe from './components/LikedRecipe';
-// import Category from "./components/Category";
+import RecentRecipes from "./components/RecentRecipes";
+import Type from "./components/Type";
+import LikedRecipe from './components/LikedRecipe';
+
 
 
 function App() {
@@ -17,25 +18,34 @@ function App() {
     console.log(data.hits)
     setRecipes(data.hits)
   }
-  function handleSubmit() {
+  function handleSubmit(){
     getRecipes(searchTerm)
    
   }
 
+  // const RecentRecipes = localStorage.getRecentRecipe();
+  //   if (RecentRecipes === null) {
+  //     return [];
+  //   } else {
+  //     return JSON.parse(RecentRecipes);
+  //   }
+  
   return (
     <div className="App">
-      <input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
-      <Button variant='primary' onClick={handleSubmit}>Submit</Button>
-      {recipes && recipes.map((item, index) => {
+      <input value={searchTerm}onChange={(event)=>setSearchTerm(event.target.value)}/>
+      <Button variant='primary' onClick={handleSubmit}>Submit</Button> 
+      {recipes && recipes.map((item, index)=>{
         return <div key={index}>{item.recipe.label}
-          <img src={item.recipe.image} alt="" />
+        <img src={item.recipe.image} alt=""/>
         </div>
       })}
+
+      <Type></Type>
+      <RecentRecipes></RecentRecipes>
+      <LikedRecipe></LikedRecipe>
     </div>
-      // <RecentRecipes />,
-      // <LikedRecipe />
-    // <Category/>
   );
+  
 }
 
 export default App;

@@ -5,7 +5,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { Card } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 // import {component} from 'react-bootstrap';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
