@@ -1,7 +1,4 @@
 
-
-// let recentRecipes = "";
-
 function RecentRecipes() {
   return (
 
@@ -21,4 +18,4 @@ function RecentRecipes() {
 export default RecentRecipes;
 
 
-{/* let apiUrl = "https://api.edamam.com/api/recipes/v2?type=public&app_id=25373478&apiKey=d7cbf056cc18d4141af4063adcd2a63a"; */ }
+/* let apiUrl = "https://api.edamam.com/api/recipes/v2?type=public&app_id=25373478&apiKey=d7cbf056cc18d4141af4063adcd2a63a"; */ 
