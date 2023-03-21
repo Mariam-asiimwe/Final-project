@@ -12,6 +12,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -29,12 +30,15 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto ;
+  // background-color: #2196F3;
   padding: 10px;
 }
-
 .grid-item {
+  // background-color: rgba(255, 255, 255, 0.8);
+  // border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
+  // font-size: 30px;
   text-align: center;
 }
 
@@ -45,4 +49,6 @@
   to {
     transform: rotate(360deg);
   }
-}/*# sourceMappingURL=App.css.map */
+}
+
+
