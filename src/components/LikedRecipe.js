@@ -1,7 +1,7 @@
-import { useState } from 'react';
 
-export default function MyCheckbox() {
-  const [liked, setLiked] = useState(true);
+import React from 'react';
+
+export default function MyCheckbox({liked,setLiked}) {
 
   function handleChange(e) {
     setLiked(e.target.checked);

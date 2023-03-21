@@ -2,18 +2,13 @@ import React from "react";
 import { Row } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import LikedRecipe from './LikedRecipe'
+import { useState } from 'react';
 
 function RecentRecipes() {
-
-  //  {
-  //   const RecentRecipes = localStorage.getItem();
-  //   if (RecentRecipes === null) {
-  //     return [];
-  //   } else {
-  //     return JSON.parse(recentRecipes);
-  //   }
-  // }
+  const [liked, setLiked] = useState(true);
+  
+  
   return (
     <section id="recent-recipes">
       <div className="container text-center">
@@ -44,10 +39,10 @@ function RecentRecipes() {
           </Card.Body>
         </Card>
       </Row>
+      <LikedRecipe liked={liked} setLiked={setLiked}> </LikedRecipe>
     </section>
   )
 }
-
 
 export default RecentRecipes;
 
