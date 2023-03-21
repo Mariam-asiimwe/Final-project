@@ -11,32 +11,34 @@ import RecentRecipes from "./components/RecentRecipes";
 
 
 function App() {
-  const [recipes, setRecipes] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("chicken");
-  let apiUrl = "https://api.edamam.com/api/recipes/v2?type=public&app_id=0639710c&app_key=e94e7c998f0107fb2b6478641c6d762d&q=";
-  async function getRecipes(term) {
-    let result = await fetch(apiUrl + term);
-    let data = await result.json();
-    console.log(data.hits)
-    setRecipes(data.hits)
+  const [recipes,setRecipes]=useState([])
+  const [searchTerm,setSearchTerm]=useState("")
+  let apiUrl ="https://api.edamam.com/api/recipes/v2?type=public&app_id=0639710c&app_key=e94e7c998f0107fb2b6478641c6d762d&q="
+  async function getRecipes(term){
+    let result=await fetch(apiUrl+term)
+    let data=await result.json()
+    console.log (data.hits)
+    setRecipes(data.hits.slice(0,6))
   }
-  function handleSubmit() {
-    getRecipes(searchTerm)
-
+  function handleSubmit(){
+    getRecipes(searchTerm);
+    setSearchTerm("");
+    
   }
 
   return (
     <div className="App">
-      <input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
-      <Button variant='primary' onClick={handleSubmit}>Submit</Button>
-      {recipes && recipes.map((item, index) => {
-        return <div key={index}>{item.recipe.label}
-          <img src={item.recipe.image} alt="" />
+      <input value={searchTerm}onChange={(event)=>setSearchTerm(event.target.value)}/>
+      <Button variant='primary' onClick={handleSubmit}>Search</Button> 
+      <div className='grid-container'>
+
+      {recipes && recipes.map((item, index)=>{
+        return <div className='grid-item' key={index}>{item.recipe.label}
+        <img  src={item.recipe.image} alt=""/>
         </div>
       })}
-     
-      <RecentRecipes></RecentRecipes>
-      {/* <LikedRecipe></LikedRecipe> */}
+      </div>
+      
     </div>
   );
 
