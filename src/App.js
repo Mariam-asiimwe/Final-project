@@ -1,7 +1,13 @@
-import logo from './logo.svg';
+// import React from "react";
 import Button from "react-bootstrap/Button"
 import './App.scss';
 import { useState } from 'react';
+import RecentRecipes from "./components/RecentRecipes";
+
+// import LikedRecipe from './components/LikedRecipe';
+
+
+
 
 
 function App() {
@@ -19,7 +25,7 @@ function App() {
     setSearchTerm("");
     
   }
-  
+
   return (
     <div className="App">
       <input value={searchTerm}onChange={(event)=>setSearchTerm(event.target.value)}/>
@@ -35,6 +41,7 @@ function App() {
       
     </div>
   );
+
 }
 
 export default App;
