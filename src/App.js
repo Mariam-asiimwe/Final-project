@@ -15,13 +15,15 @@ function App() {
     setRecipes(data.hits.slice(0,6))
   }
   function handleSubmit(){
-    getRecipes(searchTerm)
+    getRecipes(searchTerm);
+    setSearchTerm("");
+    
   }
   
   return (
     <div className="App">
       <input value={searchTerm}onChange={(event)=>setSearchTerm(event.target.value)}/>
-      <Button variant='primary' onClick={handleSubmit}>Submit</Button> 
+      <Button variant='primary' onClick={handleSubmit}>Search</Button> 
       <div className='grid-container'>
 
       {recipes && recipes.map((item, index)=>{
