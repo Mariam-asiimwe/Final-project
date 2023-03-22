@@ -9,6 +9,9 @@ import './index.css';
 >>>>>>> main
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Card } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
+// import {component} from 'react-bootstrap';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
