@@ -3,41 +3,55 @@ import { Row } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import LikedRecipe from './LikedRecipe'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import RecipeContext from "../Context/recipeContext";
+
+
 
 function RecentRecipes() {
   const [liked, setLiked] = useState(true);
-  
-  
+  const ctx = useContext(RecipeContext)
+
   return (
     <section id="recent-recipes">
       <div className="container text-center">
         <h3>Recent Recipes</h3>
       </div>
       <Row>
-        <Card style={{ width: '25rem' }}>
+        {ctx.recipes && ctx.recipes.map((item) => {
+          return (
+            <Card style={{ width: '25rem' }} key={item.recipe.id}>
+              <Card.Img variant="top" src={item.recipe.image} />
+              <Card.Body>
+                <Card.Title>{item.recipe.label}</Card.Title>
+                <Button a href="{}">Click for video</Button>
+              </Card.Body>
+            </Card>
+          )
+        })}
+        {/* <Card style={{ width: '25rem' }}>
           <Card.Img variant="top" src="{item.recipe.image}" />
           <Card.Body>
             <Card.Title>Recipe name</Card.Title>
             <Button a href="{}">Click for video</Button>
           </Card.Body>
-        </Card>
+        </Card> */}
 
-        <Card style={{ width: '25rem' }}>
+        {/* <Card style={{ width: '25rem' }}>
           <Card.Img variant="top" src="{item.recipe.image}" />
           <Card.Body>
             <Card.Title>Recipe name</Card.Title>
             <Button a href="{}">Click for video</Button>
           </Card.Body>
-        </Card>
+        </Card> */}
 
-        <Card style={{ width: '25rem' }}>
+        {/* <Card style={{ width: '25rem' }}>
           <Card.Img variant="top" src="{item.recipe.image}" />
           <Card.Body>
             <Card.Title>Recipe name</Card.Title>
             <Button a href="{}">Click for video</Button>
           </Card.Body>
-        </Card>
+        </Card> */}
       </Row>
       <LikedRecipe liked={liked} setLiked={setLiked}> </LikedRecipe>
     </section>
