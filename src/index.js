@@ -7,12 +7,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Card } from 'react-bootstrap';
 import { ListGroup } from 'react-bootstrap';
+import { Provider } from './Context/recipeContext';
 // import {component} from 'react-bootstrap';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   <React.StrictMode>
-    <App />
+    <Provider>
+      <App />
+    </Provider>
+
   </React.StrictMode>
 );
 

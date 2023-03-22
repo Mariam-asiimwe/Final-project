@@ -4,8 +4,13 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import RecipeContext from '../Context/recipeContext';
+
+
+
 function RecipeNavbar() {
+  const ctx = useContext(RecipeContext)
    const [searchTerm,setSearchTerm]=useState("chicken")
    let apiUrl ="https://api.edamam.com/api/recipes/v2?type=public&app_id=0639710c&app_key=e94e7c998f0107fb2b6478641c6d762d&q="
    async function getRecipes(term){
@@ -13,7 +18,11 @@ function RecipeNavbar() {
      let data=await result.json()
      console.log (data.hits)
    //need to add the search result to a global state context
+
+
    //refer to react context API
+
+   ctx.setRecipes(data.hits)
    }
    function handleSubmit(e){
     e.preventDefault()
