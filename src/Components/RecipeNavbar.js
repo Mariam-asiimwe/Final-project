@@ -11,22 +11,23 @@ import RecipeContext from '../Context/recipeContext';
 
 function RecipeNavbar() {
   const ctx = useContext(RecipeContext)
-   const [searchTerm,setSearchTerm]=useState("chicken")
+   const [searchTerm,setSearchTerm]=useState("")
    let apiUrl ="https://api.edamam.com/api/recipes/v2?type=public&app_id=0639710c&app_key=e94e7c998f0107fb2b6478641c6d762d&q="
    async function getRecipes(term){
      let result=await fetch(apiUrl+term)
      let data=await result.json()
      console.log (data.hits)
    //need to add the search result to a global state context
-
+  
 
    //refer to react context API
 
-   ctx.setRecipes(data.hits)
+   ctx.setRecipes(data.hits.slice(0,6))
    }
    function handleSubmit(e){
     e.preventDefault()
     getRecipes(searchTerm)
+    setSearchTerm("");
   }
   return (
     <Navbar bg="light" expand="lg">

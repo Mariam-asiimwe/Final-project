@@ -1,10 +1,11 @@
 import React from "react";
 import { Row } from "react-bootstrap";
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import LikedRecipe from './LikedRecipe'
 import { useState, useContext } from 'react';
 import RecipeContext from "../Context/recipeContext";
+import Recipe from './Recipe';
 
 
 
@@ -20,11 +21,11 @@ function RecentRecipes() {
       <Row>
         {ctx.recipes && ctx.recipes.map((item) => {
           return (
-            <Card style={{ width: '25rem' }} key={item.recipe.id}>
-              <Card.Img variant="top" src={item.recipe.image} />
+            <Card style={{ width: '25rem' }} key={item.recipe.label}>
+              {/* <Card.Img variant="top" src={item.recipe.image} /> */}
               <Card.Body>
-                <Card.Title>{item.recipe.label}</Card.Title>
-                <Button a href="{}">Click for video</Button>
+                {/* <Card.Title>{item.recipe.label}</Card.Title> */}
+              <Recipe key={item} item={item}></Recipe>
               </Card.Body>
             </Card>
           )
