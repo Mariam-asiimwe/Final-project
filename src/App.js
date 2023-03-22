@@ -17,8 +17,10 @@ function App() {
     console.log (data.hits)
     setRecipes(data.hits)
   }
-  function handleSubmit(){
-    getRecipes(searchTerm)
+  function handleSubmit() {
+    getRecipes(searchTerm);
+    setSearchTerm("");
+
   }
 
   return (
@@ -37,6 +39,7 @@ function App() {
       <Footer></Footer>
     </div>
   );
+
 }
 
 export default App;
