@@ -2,15 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-<<<<<<< HEAD
 import './index.scss';
-=======
-import './index.css';
->>>>>>> main
+// import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Card } from 'react-bootstrap';
-import { ListGroup } from 'react-bootstrap';
+// import { Card } from 'react-bootstrap';
+// import { ListGroup } from 'react-bootstrap';
 import { Provider } from './Context/recipeContext';
 // import {component} from 'react-bootstrap';
 
