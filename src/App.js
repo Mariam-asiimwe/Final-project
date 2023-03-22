@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+
 import Button from "react-bootstrap/Button"
-import './App.css';
+import './App.scss';
 import { useState } from 'react';
+import Footer from "./Components/Pages/Footer";
 
 
 function App() {
@@ -27,20 +28,7 @@ function App() {
         <img src={item.recipe.image} alt=""/>
         </div>
       })}
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Footer></Footer>
     </div>
   );
 }
