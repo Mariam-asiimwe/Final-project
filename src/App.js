@@ -1,13 +1,15 @@
+
 // import React from "react";
 import Button from "react-bootstrap/Button"
 import './App.scss';
 import { useState } from 'react';
 import RecentRecipes from "./components/RecentRecipes";
+import Recipe from './components/Recipe';
+import 'bootstrap/dist/js/bootstrap.bundle.min'
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 // import LikedRecipe from './components/LikedRecipe';
-
-
-
 
 
 function App() {
@@ -35,6 +37,7 @@ function App() {
       {recipes && recipes.map((item, index)=>{
         return <div className='grid-item' key={index}>{item.recipe.label}
         <img  src={item.recipe.image} alt=""/>
+        <Recipe key={index} item={item}/>
         </div>
       })}
       </div>
@@ -45,3 +48,4 @@ function App() {
 }
 
 export default App;
+

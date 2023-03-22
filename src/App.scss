@@ -1,3 +1,10 @@
+
+.body {
+  background-color: purple;
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -12,6 +19,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -40,6 +50,7 @@
   // font-size: 30px;
   text-align: center;
 }
+
 
 @keyframes App-logo-spin {
   from {
