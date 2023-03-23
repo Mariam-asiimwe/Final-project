@@ -11,20 +11,20 @@ import RecipeContext from '../Context/recipeContext';
 
 function RecipeNavbar() {
   const ctx = useContext(RecipeContext)
-   const [searchTerm,setSearchTerm]=useState("")
-   let apiUrl ="https://api.edamam.com/api/recipes/v2?type=public&app_id=0639710c&app_key=e94e7c998f0107fb2b6478641c6d762d&q="
-   async function getRecipes(term){
-     let result=await fetch(apiUrl+term)
-     let data=await result.json()
-     console.log (data.hits)
-   //need to add the search result to a global state context
-  
+  const [searchTerm, setSearchTerm] = useState("")
+  let apiUrl = "https://api.edamam.com/api/recipes/v2?type=public&app_id=0639710c&app_key=e94e7c998f0107fb2b6478641c6d762d&q="
+  async function getRecipes(term) {
+    let result = await fetch(apiUrl + term)
+    let data = await result.json()
+    console.log(data.hits)
+    //need to add the search result to a global state context
 
-   //refer to react context API
 
-   ctx.setRecipes(data.hits.slice(0,6))
-   }
-   function handleSubmit(e){
+    //refer to react context API
+
+    ctx.setRecipes(data.hits.slice(0, 6))
+  }
+  function handleSubmit(e) {
     e.preventDefault()
     getRecipes(searchTerm)
     setSearchTerm("");
@@ -42,26 +42,25 @@ function RecipeNavbar() {
           >
             <Nav.Link href="#action1">Home</Nav.Link>
             <Nav.Link href="#action2">Contact</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <NavDropdown title="Select recipe type" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3"> Omnivorous
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
               <NavDropdown.Item href="#action4">
-                Another action
+                Vegan/ Vegetarian
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                Something else here
+                Pescatarian
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Search"
               value={searchTerm}
-              onChange={(e)=>setSearchTerm(e.target.value)}
+              onChange={(e) => setSearchTerm(e.target.value)}
               className="me-2"
               aria-label="Search"
             />
