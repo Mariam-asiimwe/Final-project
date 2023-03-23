@@ -54,6 +54,12 @@ function RecipeNavbar() {
                 Pescatarian
               </NavDropdown.Item>
             </NavDropdown>
+<<<<<<< Updated upstream
+=======
+            <Nav.Link href="#" disabled>
+            
+            </Nav.Link>
+>>>>>>> Stashed changes
           </Nav>
           <Form className="d-flex">
             <Form.Control

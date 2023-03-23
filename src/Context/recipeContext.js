@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import {  createContext, useState } from "react";
+=======
+import {createContext, useState } from "react";
+>>>>>>> Stashed changes
 
 const RecipeContext = createContext();
 

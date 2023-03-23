@@ -7,7 +7,6 @@ Final Project
  ## Table of Contents
 
 - [Description](#description)
-<<<<<<< HEAD
 - [Screenshot](#screenshot)
 - [Technologies used](#technologies-used)
 - [Installation](#installation)
@@ -18,23 +17,6 @@ Final Project
 - [License](#license)
 
 
-
-## Description
-
-Want to have fun in the kitchen whiles teaching your kids how to cook? Bored of eating the same food? Need something inspirational, delicious and healthy to cook with the kids? Then checkout this new App, it will make your life easy! This app provide a one-stop-shop for food inspiration in the kitchen for both adults and kids, with a focus on healthy and nutritious meal options. Search for your recipes based on ingredients, cuisine, meal type, and dietary restrictions, and you will be presented with information on the nutritional value of each recipe and also step by step guides on how to cook it.
-
-
-## Screenshot
-
-=======
-- [Screen shot](#screen)
-- [Features](#features)
-- [Technologies used](#technologies)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [Authors](#authors)
-- [Link](#link)
-- [License](#license)
 
 
 ## Description
@@ -61,12 +43,10 @@ Navigation Bar
 youtube links
 
  
->>>>>>> main
 
 ## Technologies used
 
 * ReactJS
-<<<<<<< HEAD
 * Axios
 * react-bootstrap
 * NPM
@@ -74,22 +54,10 @@ youtube links
 * Other node packages
 * SASS
 * NodeJS
-* React-DOM
-=======
-* React Router
-* SASS
-* API
-* react-Bootstrap
-* Other node packages
-* CSS custom properties
-* Flexbox
-* CSS Grid
 * nodejs
 * Netlify
-* axios
 * react-dom
 * Bootstrap
->>>>>>> main
 
 
 ## Installation
@@ -108,31 +76,17 @@ Open http://localhost:3000 to view it in the browser. The page will reload if yo
 
 If you want to contribute, pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-<<<<<<< HEAD
-## Link
-
-## Continue development
-
-
-To adde a youtube video
-## Authors
-
-Vida 
-Mariam
-Constance
-Prince
-=======
 ## Authors
 
 Vida Nsiah
 Constance
 Mariam Asiimwe
+Prince
 
 
 ## Link
 
 
->>>>>>> main
 
 ## License
 

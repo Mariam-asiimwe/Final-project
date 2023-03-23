@@ -5,8 +5,11 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+<<<<<<< Updated upstream
 // import { Card } from 'react-bootstrap';
 // import { ListGroup } from 'react-bootstrap';
+=======
+>>>>>>> Stashed changes
 import { Provider } from './Context/recipeContext';
 // import {component} from 'react-bootstrap';
 
