@@ -1,24 +1,24 @@
 
 import React from 'react';
 import './App.scss';
-import Footer from './components/Pages/Footer';
-import RecipeNavbar from "./components/RecipeNavbar";
-import RecentRecipes from './components/RecentRecipes';
+import Footer from './Components/Pages/Footer';
+import RecipeNavbar from "./Components/RecipeNavbar";
+import RecentRecipes from './Components/RecentRecipes';
 
 
 function App() {
 
-  
+
 
   return (
 
-   
+
 
     <div className="App">
-      
-     
-       <RecipeNavbar></RecipeNavbar>
-       <RecentRecipes />
+
+
+      <RecipeNavbar></RecipeNavbar>
+      <RecentRecipes />
       <Footer></Footer>
     </div>
   );
