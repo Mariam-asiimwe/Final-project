@@ -41,7 +41,7 @@ function RecipeNavbar() {
             navbarScroll
           >
             <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Contact</Nav.Link>
+            
             <NavDropdown title="Select recipe type" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3"> Omnivorous
               </NavDropdown.Item>

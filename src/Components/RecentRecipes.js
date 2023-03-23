@@ -16,43 +16,21 @@ function RecentRecipes() {
   return (
     <section id="recent-recipes">
       <div className="container text-center">
-        <h3>Recent Recipes</h3>
+        <h2 style={{fontStyle:'monaco',fontSize: '80px', color: 'rgba(16,17,15,1)',padding: '10px 0', marginTop:'0'}}>Recipes</h2>
       </div>
       <Row>
         {ctx.recipes && ctx.recipes.map((item) => {
           return (
-            <Card style={{ width: '25rem', margin: '20px' }} key={item.recipe.label}>
-              {/* <Card.Img variant="top" src={item.recipe.image} /> */}
+            <Card style={{ borderReadius:'30px',width: '25rem', margin: '20px', backgroundColor:'rgb(227, 234, 238, 0.53' }} key={item.recipe.label}>
+              
               <Card.Body>
-                {/* <Card.Title>{item.recipe.label}</Card.Title> */}
+               
               <Recipe key={item} item={item}></Recipe>
               </Card.Body>
             </Card>
           )
         })}
-        {/* <Card style={{ width: '25rem' }}>
-          <Card.Img variant="top" src="{item.recipe.image}" />
-          <Card.Body>
-            <Card.Title>Recipe name</Card.Title>
-            <Button a href="{}">Click for video</Button>
-          </Card.Body>
-        </Card> */}
-
-        {/* <Card style={{ width: '25rem' }}>
-          <Card.Img variant="top" src="{item.recipe.image}" />
-          <Card.Body>
-            <Card.Title>Recipe name</Card.Title>
-            <Button a href="{}">Click for video</Button>
-          </Card.Body>
-        </Card> */}
-
-        {/* <Card style={{ width: '25rem' }}>
-          <Card.Img variant="top" src="{item.recipe.image}" />
-          <Card.Body>
-            <Card.Title>Recipe name</Card.Title>
-            <Button a href="{}">Click for video</Button>
-          </Card.Body>
-        </Card> */}
+        
       </Row>
       <LikedRecipe liked={liked} setLiked={setLiked}> </LikedRecipe>
     </section>
