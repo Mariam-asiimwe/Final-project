@@ -10,7 +10,7 @@ function Recipe({item}) {
       <h4>{item.recipe.label}</h4>
       <img src={item.recipe.image} alt=""/>
       <br/><br/>
-      <Button variant='primary' onClick={() => setShowIngredients(!showIngredients)}>{showIngredients ? "Hide Ingredients" : "View Ingredients"} </Button> 
+      <Button style={{backgroundColor:'black'}} variant='primary' onClick={() => setShowIngredients(!showIngredients)}>{showIngredients ? "Hide Ingredients" : "View Ingredients"} </Button> 
       <br/>
       {showIngredients && item.recipe.ingredientLines && item.recipe.ingredientLines.map((item, index)=>
         <p key={index}>{item}</p>
