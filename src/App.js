@@ -4,6 +4,8 @@ import './App.scss';
 import Footer from './components/Pages/Footer';
 import RecipeNavbar from "./components/RecipeNavbar";
 import RecentRecipes from './components/RecentRecipes';
+import { Container } from 'react-bootstrap';
+import Background from './components/Images/background2.jpg'
 
 
 function App() {
@@ -17,9 +19,16 @@ function App() {
     <div className="App">
       
      
-       <RecipeNavbar></RecipeNavbar>
+       <div style={{backgroundImage: `url(${Background})`}}>
+       <RecipeNavbar/>
+
+       <Container >
+        
        <RecentRecipes />
-      <Footer></Footer>
+       </Container>
+       
+       </div>
+      <Footer/>
     </div>
   );
 

@@ -21,7 +21,7 @@ function RecentRecipes() {
       <Row>
         {ctx.recipes && ctx.recipes.map((item) => {
           return (
-            <Card style={{ width: '25rem' }} key={item.recipe.label}>
+            <Card style={{ width: '25rem', margin: '20px' }} key={item.recipe.label}>
               {/* <Card.Img variant="top" src={item.recipe.image} /> */}
               <Card.Body>
                 {/* <Card.Title>{item.recipe.label}</Card.Title> */}
