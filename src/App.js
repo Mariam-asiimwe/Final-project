@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       
      
-       <div style={{backgroundImage: `url(${Background})`,minHeight: '100vh'}}>
+       <div style={{backgroundImage: `url(${Background})`,minHeight: '100vh', backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
        <RecipeNavbar/>
 
        <Container >
