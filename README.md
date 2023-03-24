@@ -7,7 +7,6 @@ Final Project
  ## Table of Contents
 
 - [Description](#description)
-<<<<<<< HEAD
 - [Screenshot](#screenshot)
 - [Technologies used](#technologies-used)
 - [Installation](#installation)
@@ -26,7 +25,7 @@ Want to have fun in the kitchen whiles teaching your kids how to cook? Bored of 
 
 ## Screenshot
 
-=======
+
 - [Screen shot](#screen)
 - [Features](#features)
 - [Technologies used](#technologies)
@@ -58,15 +57,12 @@ Detailed Description
 Ingredients List
 Search
 Navigation Bar
-youtube links
 
- 
->>>>>>> main
+
 
 ## Technologies used
 
 * ReactJS
-<<<<<<< HEAD
 * Axios
 * react-bootstrap
 * NPM
@@ -75,7 +71,6 @@ youtube links
 * SASS
 * NodeJS
 * React-DOM
-=======
 * React Router
 * SASS
 * API
@@ -89,7 +84,7 @@ youtube links
 * axios
 * react-dom
 * Bootstrap
->>>>>>> main
+
 
 
 ## Installation
@@ -108,7 +103,7 @@ Open http://localhost:3000 to view it in the browser. The page will reload if yo
 
 If you want to contribute, pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-<<<<<<< HEAD
+
 ## Link
 
 ## Continue development
@@ -121,7 +116,7 @@ Vida
 Mariam
 Constance
 Prince
-=======
+
 ## Authors
 
 Vida Nsiah
@@ -132,7 +127,6 @@ Mariam Asiimwe
 ## Link
 
 
->>>>>>> main
 
 ## License
 
