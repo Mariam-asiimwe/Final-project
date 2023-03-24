@@ -36,15 +36,8 @@ Want to have fun in the kitchen whiles teaching your kids how to cook? Bored of 
 - [License](#license)
 
 
-## Description
-
- Are you tired of having boring food or searching for what to feed the family? Search no more. Our Recipe Search App is the solution for families who are looking for inspiration in the kitchen. With numerous recipe websites available, it can be difficult and time-consuming to find the perfect dish. That's where our app comes in.
-
-The concept behind our app is to provide a one-stop-shop for Families who want to have fun when cooking with their kids to find recipes quickly and easily. Our app allows users to search for recipes based on ingredients, cuisine, meal type, and dietary restrictions. The results are displayed in a clear and concise format, complete with instructions, youtube vidoe and ingredient lists from the source of the recipe.
-
-With our Recipe Search App, you'll never have to spend time sifting through countless websites again. Find the perfect recipe in just a few clicks!
-
 ## Screen shot
+
 
 ## Features
 
@@ -75,11 +68,6 @@ Navigation Bar
 * SASS
 * API
 * react-Bootstrap
-* Other node packages
-* CSS custom properties
-* Flexbox
-* CSS Grid
-* nodejs
 * Netlify
 * axios
 * react-dom
